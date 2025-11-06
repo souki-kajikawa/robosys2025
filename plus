@@ -5,6 +5,6 @@ import sys
 
 ans = 0
 for line in sys.stdin:
-    ans += float(line)
+    ans += int(line)
 
 print(ans)

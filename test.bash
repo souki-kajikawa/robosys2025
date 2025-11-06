@@ -10,7 +10,7 @@ ng () {
 res=0
 ### NORMAL ###
 out=$(seq 5 | ./plus)
-[ "${out}" = 15.0 ] || ng "$LINENO"
+[ "${out}" = 15 ] || ng "$LINENO"
 
 ### STRANGE ###
 out=$(echo あ | ./plus)
