@@ -9,16 +9,16 @@ ng () {
 
 res=0
 ### NORMAL ###
-out=$(seq 5 | ./plus )
-[ "${out}" = 15 ] || ng "$LINENO"
+out=$(seq 5|./plus)
+[ "${out}" = 15.0 ] || ng "$LINENO"
 
 ### STRANGE ###
-out=$(echo あ | ./plus )
+out=$(echo あ|./plus)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
 ### STRANGE ###
-out=$(echo | ./plus )
+out=$(echo|./plus)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
