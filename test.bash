@@ -11,7 +11,6 @@ res=0
 ### NORMAL ###
 out=$(seq 5 | ./plus)
 [ "${out}" = 15.0 ] || ng "$LINENO"
-[ "${res}" = 0 ] && echo OK
 
 ### STRANGE ###
 out=$(echo あ | ./plus)
