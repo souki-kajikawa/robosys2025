@@ -9,14 +9,26 @@ ng () {
 
 res=0
 
-out=$(seq 5 | ./plus)
-[ "${out}" = 15 ] || ng "$LINENO"
+out=$(5 3 | ./combination)
+[ "${out}" = 10 ] || ng "$LINENO"
 
-out=$(echo あ | ./plus)
+out=$(echo 2 | ./combination)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
-out=$(echo | ./plus)
+out=$(echo | ./combination)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
+
+out=$(echo あ　い | ./combination)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
+
+out=$(echo あ | ./combination)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
+
+out=$(echo 5 4 3 | ./combination)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
