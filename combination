@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2025 Souki Kajikawa
+# SPDX-License-Identifier: BSD-3-Clause
+import sys
+
+data= sys.stdin.read().strip().split()
+ans = 0
+l = int(data[1])
+a = 1
+b = 1
+data1 = int(data[0])
+data2 = int(data[1])
+ans = 0
+
+while l > 0:
+    a = a * data1
+    b = b * data2
+    data1 -= 1
+    data2 -= 1
+    l -= 1
+
+ans = a/b
+
+print(int(ans))
