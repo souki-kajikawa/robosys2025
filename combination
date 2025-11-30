@@ -12,6 +12,9 @@ data1 = int(data[0])
 data2 = int(data[1])
 ans = 0
 
+if len(data) != 2:
+    sys.exit(1)
+
 while l > 0:
     a = a * data1
     b = b * data2
