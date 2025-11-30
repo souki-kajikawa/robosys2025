@@ -9,7 +9,7 @@ ng () {
 
 res=0
 
-out=$(5 3 | ./combination)
+out=$(echo 5 3 | ./combination)
 [ "${out}" = 10 ] || ng "$LINENO"
 
 out=$(echo 2 | ./combination)
