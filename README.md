@@ -1,6 +1,5 @@
-# robosys2025
+# combinationコマンド
 ロボットシステム学　課題1
-combinationコマンド
 
 ## 目次
 - 概要
