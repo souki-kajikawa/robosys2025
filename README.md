@@ -1,4 +1,4 @@
-# robosys2025
+# combination
 ロボットシステム学　課題1
 
 ## 目次
